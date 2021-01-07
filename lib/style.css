@@ -1,0 +1,112 @@
+
+header { grid-area: header; }
+aside { grid-area: aside; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+  header {
+    text-align: center;
+    background: url("https://media.istockphoto.com/photos/blue-circle-light-bulbs-and-smoke-abstract-background-picture-id945925142");
+    background-size: cover;
+    color: darkblue;
+  }
+  a {
+    color: white;
+  }
+  h1 {
+    font-size: 70px;
+  }
+  img {
+    margin: 40px 0px 0px 0px;
+    border: 7px solid blue;
+    border-radius: 20px;
+  }
+  ul {
+    padding: 10px;
+    background: rgba(0,0,200,0.5);
+  }
+  li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
+  }
+  article {
+    max-width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+
+  .container {
+    display: grid;
+  
+    grid-template-areas: 
+      "header header"
+      ".  aside"
+      "main main"
+      "footer footer";
+  }
+  
+  header, aside, main, footer {
+    margin: 20px;
+  }
+     
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  p {
+    color: rgba(255,255,255,1);
+    background: black;
+    background: linear-gradient(bottom, rgb(55, 100, 136), rgba(0,0,0,.4));
+    background: -webkit-linear-gradient(bottom, rgb(55, 100, 136), rgba(0,0,0,.4));
+    background: -moz-linear-gradient(bottom, rgb(55, 100, 136), rgba(0,0,0,.4));
+    padding: 10px;
+    line-height: 28px;
+    height: 30px;
+    transition: height 1s;
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+  }
+  small {
+    font-size: 16px;
+  }
+
+  .show-description p {
+    height: 150px;
+  }
+  
+  
+  /* .pic {
+    text-align: center;
+    border: 1px solid gray;
+    margin: 30px;
+    padding: 3px;
+  } */
+  
+  @media (max-width: 550px) {
+    header, aside, main, footer {
+      margin: 0
+    }
+  }
+  /* @media (max-width: 500px) {
+    h1 {
+      font-size: 36px;
+      padding: 5px;
+    }
+    li {
+      padding: 5px;
+      display: block;
+    }
+  } 
+  input {
+    border: 0;
+    padding: 10px;
+    font-size: 18px;
+  }
+  input[type="submit"] {
+    background: green;
+    color: white;
+  }
+ input[type="email"] {
+   background: lightgrey;
+  } */
