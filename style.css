@@ -1,14 +1,20 @@
 
-header { grid-area: header; }
-aside { grid-area: aside; }
-main { grid-area: main; }
+header { grid-area: header;
+         text-align: center;
+         background: url("https://media.istockphoto.com/photos/blue-circle-light-bulbs-and-smoke-abstract-background-picture-id945925142");
+         background-size: cover;
+         color: darkblue; }
+aside { grid-area: aside;
+        display:flex;
+        justify-content : space-between;
+        margin: 0px; }
+.projects { grid-area: projects; }
+.publish{ grid-area:publish;}
 footer { grid-area: footer; }
+ul{ grid-area: ul}
 
   header {
-    text-align: center;
-    background: url("https://media.istockphoto.com/photos/blue-circle-light-bulbs-and-smoke-abstract-background-picture-id945925142");
-    background-size: cover;
-    color: darkblue;
+
   }
   a {
     color: white;
@@ -22,35 +28,56 @@ footer { grid-area: footer; }
     border-radius: 20px;
   }
   ul {
-    padding: 10px;
+    display:flex;
+    justify-content : space-between;
+    /*text-align:center;*/
+    padding: 30px;
     background: rgba(0,0,200,0.5);
+    margin: 0px;
   }
   li {
     display: inline;
-    padding: 0px 10px 0px 10px;
+    font-size: 26px;
+    padding: 0px 50px 0px 50px;
+  }
+  h2 {
+   padding: 20px;
   }
   article {
     max-width: 500px;
     padding: 20px;
     margin: 0 auto;
   }
-
-
+  .projects{ 
+    display: flex;
+    align-items:center;
+    padding: 10px;
+    background: #7b778884;
+  }
+  .publish {   
+    display: flex;
+    justify-content : center;
+ } 
+ footer {   
+  display: flex;
+  justify-content : center;
+  margin: 0px;
+  /*align-items:center;*/
+ } 
   .container {
     display: grid;
-  
     grid-template-areas: 
-      "header header"
-      ".  aside"
-      "main main"
-      "footer footer";
+      "header header header"
+      "ul ul ul"
+      "aside  aside  aside "
+      "projects projects projects"
+      "publish publish publish"
+      "footer footer footer";
   }
-  
-  header, aside, main, footer {
-    margin: 20px;
-  }
+ 
      
   main {
+    margin: 0px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -74,15 +101,7 @@ footer { grid-area: footer; }
   .show-description p {
     height: 150px;
   }
-  
-  
-  /* .pic {
-    text-align: center;
-    border: 1px solid gray;
-    margin: 30px;
-    padding: 3px;
-  } */
-  
+ 
   @media (max-width: 550px) {
     header, aside, main, footer {
       margin: 0

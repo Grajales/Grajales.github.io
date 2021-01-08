@@ -7,7 +7,7 @@
   $("h1").on("click", function() {
     alert("Header Clicked!");
   });*/
-  const button = document.querySelector('button');
+  /* const button = document.querySelector('button');
   button.addEventListener('click', event => {
     button.textContent = `Click count: ${event.detail}`;
-  });
+  });*/
