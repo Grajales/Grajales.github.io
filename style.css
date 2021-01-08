@@ -1,60 +1,86 @@
 
-header { grid-area: header;
-         text-align: center;
-         background: url("https://media.istockphoto.com/photos/blue-circle-light-bulbs-and-smoke-abstract-background-picture-id945925142");
-         background-size: cover;
-         color: darkblue; }
-aside { grid-area: aside;
-        display:flex;
-        justify-content : space-between;
-        margin: 0px; }
-.projects { grid-area: projects; }
-.publish{ grid-area:publish;}
-footer { grid-area: footer; }
-ul{ grid-area: ul}
+header {grid-area: header; }
+aside {grid-area: aside;}
+.projects {grid-area: projects; }
+.publish {grid-area: publish;}
+footer {grid-area: footer; }
+ul {grid-area: ul;}
 
-  header {
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    ". ul ul"
+    ". aside aside"
+    "projects projects projects"
+    "publish publish publish"
+    "footer footer footer";
+}
+header { 
+  text-align: center;
+  background: url("https://media.istockphoto.com/photos/blue-circle-light-bulbs-and-smoke-abstract-background-picture-id945925142");
+  background-size: cover;
+  color: darkblue; 
+  font-size: 40px;
+}
+body{
+  background: rgba(112, 149, 151, 0.5);
+}
 
-  }
-  a {
-    color: white;
-  }
-  h1 {
-    font-size: 70px;
-  }
-  img {
-    margin: 40px 0px 0px 0px;
-    border: 7px solid blue;
-    border-radius: 20px;
-  }
-  ul {
+ /* .links{
     display:flex;
-    justify-content : space-between;
+    border: 6px solid rgb(140, 0, 255);
+    } */
+ul {
+    display:flex;
+    /* align-items:center;*/
+    justify-content : space-evenly;
     /*text-align:center;*/
-    padding: 30px;
-    background: rgba(0,0,200,0.5);
-    margin: 0px;
+    padding: 30px 0px 0px 0px;
+    margin: 10px;
+    /*border: 6px solid red;*/
+    /*background: rgba(112, 149, 151, 0.5);
+    background-size: cover;*/
   }
   li {
+    color:blue;
     display: inline;
-    font-size: 26px;
+    font-size: 36px;
     padding: 0px 50px 0px 50px;
-  }
-  h2 {
-   padding: 20px;
-  }
-  article {
+ }
+
+aside { 
+    display:flex;
+    justify-content : space-evenly;
+    /*align-items:center;*/
+    padding: 0px;
+    /*background: rgba(112, 149, 151, 0.5);
+    background-size: cover;*/
+   }
+img {
+    margin: 0px 0px 0px 0px;
+    border: 3px solid blue;
+    border-radius: 20px;
+    }
+.projects { 
+      display: flex;
+      align-items:center;
+      padding: 10px;
+      /*background: #7b778884;*/
+      /*background: rgba(112, 149, 151, 0.5);*/
+   }
+
+article {
     max-width: 500px;
     padding: 20px;
     margin: 0 auto;
-  }
-  .projects{ 
-    display: flex;
-    align-items:center;
-    padding: 10px;
-    background: #7b778884;
-  }
-  .publish {   
+    /*border: 6px solid rgb(255, 0, 21);*/
+ }
+ h2 {
+  padding: 20px;
+}
+
+.publish {   
     display: flex;
     justify-content : center;
  } 
@@ -64,24 +90,7 @@ ul{ grid-area: ul}
   margin: 0px;
   /*align-items:center;*/
  } 
-  .container {
-    display: grid;
-    grid-template-areas: 
-      "header header header"
-      "ul ul ul"
-      "aside  aside  aside "
-      "projects projects projects"
-      "publish publish publish"
-      "footer footer footer";
-  }
- 
-     
-  main {
-    margin: 0px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  p {
+ p {
     color: rgba(255,255,255,1);
     background: black;
     background: linear-gradient(bottom, rgb(55, 100, 136), rgba(0,0,0,.4));
@@ -117,6 +126,11 @@ ul{ grid-area: ul}
       display: block;
     }
   } 
+   main {
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
   input {
     border: 0;
     padding: 10px;
