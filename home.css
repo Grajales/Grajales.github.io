@@ -1,0 +1,105 @@
+
+header {grid-area: header; }
+ul {grid-area: ul;}
+aside {grid-area: aside;}
+article {grid-area: article; }
+footer {grid-area: footer; }
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header header "
+    "ul ul ul"
+    "aside aside aside"
+    "footer article . ";
+}
+header { 
+  text-align: center;
+  background: url("https://media.istockphoto.com/photos/blue-circle-light-bulbs-and-smoke-abstract-background-picture-id945925142");
+  background-size: cover;
+  background-clip: padding-box;
+  /* background-size: 50px; */
+  color: darkblue; 
+  text-shadow: 2px 2px #d1e3f4;
+  font-size: 30px;
+ 
+}
+body{
+  background: rgba(112, 149, 151, 0.5);
+}
+
+ul {
+    display:flex;
+    /* align-items:center;*/
+    justify-content : space-evenly;
+    /*text-align:center;*/
+    padding: 30px 0px 0px 0px;
+    margin: 10px;
+    /*border: 6px solid red;*/
+    /*background: rgba(112, 149, 151, 0.5);
+    background-size: cover;*/
+  }
+  li {
+    color:blue;
+    display: inline;
+    font-size: 36px;
+    padding: 0px 20px 0px 20px;
+    
+ }
+ a {
+  text-decoration: none;
+ }
+
+aside { 
+    display:flex;
+    justify-content : space-evenly;
+    /*align-items:center;*/
+    padding: 0px;
+    /*background: rgba(112, 149, 151, 0.5);
+    background-size: cover;*/
+   }
+img {
+    margin: 15px 0px 0px 0px;
+    border: 3px solid blue;
+    border-radius: 20px;
+    }
+
+
+article {
+    display:flex;
+    justify-content : center;
+    padding: 2px;
+    margin: 40px;
+    }
+ h2 {
+  padding: 20px;
+}
+
+
+footer {   
+  display: flex;
+  justify-content : center;
+  /*align-items:center;*/
+  margin: 30px;
+  padding: 20px;
+ }  
+
+  @media (max-width: 550px) {
+    header, aside, ul, article, footer {
+      margin: 0
+    }
+  }
+  /* @media (max-width: 500px) {
+  }*/
+  input {
+    border: 0;
+    padding: 10px;
+    font-size: 18px;
+  }
+  input[type="submit"] {
+    background: blue;
+    color: white;
+  }
+ input[type="email"] {
+   background: lightgrey;
+  } 

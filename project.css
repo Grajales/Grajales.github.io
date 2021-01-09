@@ -1,0 +1,101 @@
+
+header {grid-area: header; }
+aside {grid-area: aside;}
+.project1 {grid-area: project1; }
+.project2 {grid-area: project2; }
+.project3 {grid-area: project3; }
+footer {grid-area: footer; }
+ul {grid-area: ul;}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header header header"
+    "ul  project1 project2 project3";
+}
+header { 
+  text-align: center;
+  background: url("https://thumbs.dreamstime.com/b/big-data-science-analysis-business-technology-concept-virtual-screen-big-data-science-analysis-business-technology-concept-145015243.jpg");
+  background-size: cover;
+  color: rgb(227, 230, 233); 
+  text-shadow: 4px 4px #020202;
+  font-size: 30px;
+ 
+}
+body{
+  background: rgba(112, 149, 151, 0.5);
+}
+
+ul {
+    padding: 20px 0px 0px 10px;
+    margin: 10px;
+    /*border: 6px solid red;*/
+    /*background: rgba(112, 149, 151, 0.5);
+    background-size: cover;*/
+  }
+  li {
+    color:blue;
+    /*display: inline;*/
+    font-size: 26px;
+    padding: 5px 30px 5px 30px;
+    list-style-type: none;
+ }
+a {
+  text-decoration: none;
+}
+/* .project1 {
+  background: -moz-linear-gradient(bottom, rgb(55, 100, 136), rgba(0,0,0,.4));
+}
+.project2 {
+  background: -moz-linear-gradient(bottom, rgb(55, 100, 136), rgba(0,0,0,.4));
+}
+.project3{
+  
+}m */
+article {
+  background: -moz-linear-gradient(bottom, rgb(55, 100, 136), rgba(0,0,0,.4));
+  padding: 20px;
+  margin: 20px;
+  }
+ h2 {
+  padding: 2px;
+}
+/*<div class="projects"> */
+
+footer {   
+  display: flex;
+  /*justify-content : center;*/
+  align-items:left;
+  margin: 10px;
+ }  
+ p {
+    color: rgba(255,255,255,1);
+    padding: 15px;
+    font-size: 20px;
+    /*transition: height 1s;
+    opacity: 0.6s;
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;*/
+  }
+  .hvr:hover {opacity: 1}
+  small {
+    font-size: 18px;
+    color: white;
+    
+  }
+
+  @media (max-width: 550px) {
+    header, aside, main, footer {
+      margin: 0
+    }
+       header, aside, main, footer {
+        margin: 0
+      }
+      .container {grid-template-areas: 
+      "header"
+      "ul"
+      "project1"
+      "project2"
+      "project3";
+    }
+  }

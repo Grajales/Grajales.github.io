@@ -1,0 +1,93 @@
+
+header {grid-area: header; }
+aside {grid-area: aside;}
+
+.publish1 {grid-area: publish1;}
+.publish2 {grid-area: publish2;}
+.publish3 {grid-area: publish3;}
+footer {grid-area: footer; }
+ul {grid-area: ul;}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "ul  publish1 publish2"
+    "footer . .";
+}
+header { 
+  text-align: center;
+  background: url("https://images.squarespace-cdn.com/content/v1/593edcb12e69cf8f5d0dcdd3/1524947920042-7GMY665LYXJ2QQYG17GT/ke17ZwdGBToddI8pDm48kMQVpXcpE9iVnrL240JmvQV7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcTITXJxmGSDh0k7p9zmS-nM_OiYaIYvpVywGCWzYvRzjIjg7l_3EkjvTQ6EpWDFFA/riso+publications+.jpg?format=1500w");
+  background-size: cover;
+  color: darkblue; 
+  text-shadow: 2px 2px #d1e3f4;
+  font-size: 30px;
+ 
+}
+body{
+  background: rgba(112, 149, 151, 0.5);
+}
+
+ul {
+  padding: 20px 0px 0px 10px;
+  margin: 10px;
+  }
+  li {
+    color:blue;
+    font-size: 26px;
+    padding: 5px 30px 5px 30px;
+    list-style-type: none;
+ }
+ a {
+  text-decoration: none;
+}
+
+img {
+    margin: 0px 0px 0px 0px;
+    border: 3px solid blue;
+    border-radius: 20px;
+    }
+
+  article {
+      background: -moz-linear-gradient(bottom, rgb(55, 100, 136), rgba(0,0,0,.4));
+      padding: 20px;
+      margin: 20px;
+  }
+  h2 {
+      padding: 2px;
+    }
+
+.publish {   
+    display: flex;
+    justify-content : space-evenly;
+    /*justify-content : center;*/
+ } 
+footer {   
+  display: flex;
+  /*justify-content : center;*/
+  align-items:left;
+  margin: 10px;
+ }  
+ footer {   
+  display: flex;
+  align-items:left;
+  margin: 10px;
+ }  
+ p {
+    color: rgba(255,255,255,1);
+    padding: 15px;
+    font-size: 20px;
+  } 
+ 
+  @media (max-width: 550px) {
+    header, aside, main, footer {
+      margin: 0
+    }
+    .container {grid-template-areas: 
+    "header"
+    "ul"
+    "publish1"
+    "publish2"
+    "footer";
+  }
+}
