@@ -1,64 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <title>LGrajales Blog</title>
-    <script src="logic.js"> </script>
-</head>
-<body> 
-  <div class="container">
-    <header>
-      <h1>Liliana Grajales</h1>
-  </header>
-
-    <div class="first cell">
-      <a href="https://www.linkedin.com/in/liliana-grajales-21283aa">&nbsp;&nbsp;About Me&nbsp;&nbsp;</a>
-      <a href="https://www.linkedin.com/in/liliana-grajales-21283aa">
-      <img src="https://pbs.twimg.com/media/El1Z6iOXYAAlN-B.jpg"width="250" height="150" alt="My Photo
-        "> </a>
-     </div>
-
-    <div class="second cell">
-      <a href="projects.html"> &nbsp; &nbsp; Coding Projects &nbsp;&nbsp;</a>
-      <a href="projects.html"> 
-      <img src="https://thumbs.dreamstime.com/b/big-data-science-analysis-business-technology-concept-virtual-screen-big-data-science-analysis-business-technology-concept-145015243.jpg"width="250" height="150" alt="My Photo
-      "> </a>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saying Puzzle</title>
+    <link rel="stylesheet" href="style.css" >
+  
+  </head>
+  <body>
+    <div class="container">
+      <header >
+          <h1>Saying Puzzle</h1>
+      </header >
+    <div class=hamMenu> 
+      <div class="hamIcon"> 
+        <h1>&#9776;</h1>
+      </div>
+        <div class=instructions> 
+          <h2>Game instructions</h2>
+            <ul> 
+              <li>Click the one word that completes the saying </li>
+              <li> You have 30 seconds per saying </li>
+              <li> Click <span id="next"> Next </span> to bring a new saying or wait for the 30 seconds to expire</li>
+              <li> Click <span id="reset"> Reset </span> to reload the game</li>
+            </ul>
+        </div>
     </div>
-
-    <div class="third cell">
-      <a href="projects.html"> Engineering Projects </a>
-      <a href="projects.html">
-        <img src="https://www.allaboutcircuits.com/uploads/articles/Electrical_circuit_image_Miguel_A%CC%81._Padrin%CC%83a%CC%81n_.jpg"width="250" height="150" alt="My Photo
-        "> </a>
-    </div>
-
-    <div class="fourth cell">
-      
-    </div>
-
-    <div class="fifth cell">
-      <a href="publications.html"> &nbsp; &nbsp; Patents &nbsp;&nbsp;</a> 
-      <a href="publications.html"> 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTplSYoTihZ_LZPgCaojlSC84srtRFm2pz1Ag&usqp=CAU"width="250" height="150" alt="My Photo
-        "> </a>
-    </div>
-
-    <div class="sixth cell">
-      <a href="publications.html"> Publications </a> 
-      <a href="publications.html">
-        <img src="https://images.squarespace-cdn.com/content/v1/593edcb12e69cf8f5d0dcdd3/1524947920042-7GMY665LYXJ2QQYG17GT/ke17ZwdGBToddI8pDm48kMQVpXcpE9iVnrL240JmvQV7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcTITXJxmGSDh0k7p9zmS-nM_OiYaIYvpVywGCWzYvRzjIjg7l_3EkjvTQ6EpWDFFA/riso+publications+.jpg?format=1500w"width="250" height="150" alt="My Photo
-        "> </a>
-    </div>
-  </div>
-
-     <hr>
-     <footer>         
-     Contact @ &nbsp; <a href="https://www.linkedin.com/in/liliana-grajales-21283aa"> <span class="foot"> LinkedIn</span> </a>
-    </footer>
-<hr>
     
- 
-</body>
+      <aside>
+        <div id="countdown"> </div>
+        <h2 class="score">  </h2>
+      </aside>
+
+      <div class="saying">
+        <h2 class="h2_title"> Saying:&nbsp&nbsp </h2>
+        <p> </p>
+      </div>
+
+      <section class="row1">
+        <span class="word" id="0"> </span>
+        <span class="word" id="1"> </span>
+        <span class="word" id="2"> </span>
+        <span class="word" id="3"> </span>
+        <span class="word" id="4"> </span>
+        <span class="word" id="5"> </span>
+      </section>
+         
+        <button class="next"> Next </button> 
+        <button class="reset"> Reset </button> 
+      
+      </div>
+  
+
+    <script src="script.js" charset="utf-8"></script>
+
+  </body>
 </html>
