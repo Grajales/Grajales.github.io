@@ -52,7 +52,9 @@ img {
     border: 3px solid blue;
     border-radius: 20px;
     }
-
+.first {
+  border: 0px;
+}
 
 footer {   
   text-align: left;
